@@ -1,7 +1,9 @@
-dist/
-build/
-*.egg-info/
-.venv/
-*.__pycache__/
+dist/*
+build/*
+*.egg-info/*
+.venv/*
+**/__pycache__/**
 *.pyc
-.vscode/
+.vscode/*
+.git/*
+test.md
