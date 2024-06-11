@@ -24,10 +24,17 @@ def main():
     import argparse
     parser = argparse.ArgumentParser(description='Generate Markdown directory tree')
     parser.add_argument('directory', type=str, help='Directory to generate tree from')
+    parser.add_argument('-f', '--file', type=str, help='Output file to save the markdown tree')
     args = parser.parse_args()
     
     markdown_tree = generate_markdown_tree(args.directory)
-    print(markdown_tree)
+    
+    if args.file:
+        with open(args.file, 'w') as f:
+            f.write(markdown_tree)
+        print(f'Markdown tree saved to {args.file}')
+    else:
+        print(markdown_tree)
 
 if __name__ == "__main__":
     main()
