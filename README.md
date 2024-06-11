@@ -8,7 +8,7 @@
 `dirtree2md` をインストールするには、以下のコマンドを実行してください。
 
 ```bash
-pip install dirtree2md
+pip install git+https://github.com/yukikimoto/dirtree2md.git
 ```
 
 ## 使い方
@@ -67,8 +67,8 @@ dirtree2md /path/to/directory
 
 ## 作者
 
-- あなたの名前 (your.email@example.com)
+- yuki kimoto (https://github.com/yukikimoto)
 
 ## コントリビューション
 
-バグ報告や機能追加のリクエストは [GitHub Issues](https://github.com/yourusername/dirtree2md/issues) へお願いします。
+バグ報告や機能追加のリクエストは [GitHub Issues](https://github.com/yukikimoto/dirtree2md/issues) へお願いします。
