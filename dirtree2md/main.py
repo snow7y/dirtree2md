@@ -20,6 +20,12 @@ def generate_markdown_tree(directory):
             tree_lines.append(f'{sub_indent}- {f}')
     return '\n'.join(tree_lines)
 
+def make_markdown_file(markdown_tree, file_path):
+    with open(file_path, 'w') as f:
+        f.write(markdown_tree)
+    print(f'Markdown tree saved to {file_path}')
+
+
 def main():
     import argparse
     parser = argparse.ArgumentParser(description='Generate Markdown directory tree')
@@ -28,11 +34,9 @@ def main():
     args = parser.parse_args()
     
     markdown_tree = generate_markdown_tree(args.directory)
-    
+
     if args.file:
-        with open(args.file, 'w') as f:
-            f.write(markdown_tree)
-        print(f'Markdown tree saved to {args.file}')
+        make_markdown_file(markdown_tree, args.file)
     else:
         print(markdown_tree)
 
